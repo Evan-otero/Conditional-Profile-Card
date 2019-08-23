@@ -10,11 +10,21 @@ function render(variables = {}) {
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
+  let n = `<div class= "name">${variables.nam}</div>`;
+  if (variables.nam == null) n = `<div class 'name'>Your name </div>`;
+  else n = `<div class 'name'>"${variables.nam}"</div>`;
+
+  let l = `<div class= "lastname">${variables.las}</div>`;
+  if (variables.las == null) l = `<div class 'lastname'> Your last name</div>`;
+  else n = `<div class 'lastname'>"${variables.las}"</div>`;
+
+
+
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
+          <h1> ${n} ${l}</h1>
           <h2>Web Developer</h2>
           <h3>Miami, USA</h3>
           <ul class="position-right">
