@@ -727,7 +727,7 @@ function render(variables = {}) {
   if (variables.twitter != null) twitter = variables.twitter;
 
   let github = "alesanchezr";
-  if (variables.github != null) twitter = variables.github;
+  if (variables.github != null) github = variables.github;
 
   let linkedin = "alesanchezr";
   if (variables.linkedin != null) linkedin = variables.linkedin;
